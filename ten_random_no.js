@@ -11,7 +11,7 @@ let second_small=array[1]
 let second_large=array[array.length-2]
 console.log("Second small is ",second_small)
 console.log("Second large is ", second_large)**/
-let user=require("readline-sync")
+/**let user=require("readline-sync")
 let user_num=user.question("Enter the number ")
 let num=parseInt(user_num)
 for (let i=2;i<num;i++){
@@ -21,4 +21,15 @@ for (let i=2;i<num;i++){
     }
 }
 if (num>2){array.push(num)}
-console.log(array)
+console.log(array)**/
+array=[-3,0,1,2,-1,1,-2]
+for (let i=0;i<array.length;i++){
+    for(let j=i+1;j<array.length;j++){
+        for(let k=j+1;k<array.length;k++){
+            let sum=array[i]+array[j]+array[k]
+            if (sum==0){
+                console.log("[",array[i],",",array[j],",",array[k],"]")
+            }
+        }
+    }
+}
