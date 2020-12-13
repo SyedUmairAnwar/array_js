@@ -1,5 +1,5 @@
 let array = new Array()
-for (let i = 0; i < 10; i++) {
+/**for (let i = 0; i < 10; i++) {
     let ran = Math.floor(Math.random() * 900) + 100
     array.push(ran)
 
@@ -10,4 +10,15 @@ console.log(array)
 let second_small=array[1]
 let second_large=array[array.length-2]
 console.log("Second small is ",second_small)
-console.log("Second large is ", second_large)
+console.log("Second large is ", second_large)**/
+let user=require("readline-sync")
+let user_num=user.question("Enter the number ")
+let num=parseInt(user_num)
+for (let i=2;i<num;i++){
+    while(num%i==0){
+        array.push(i)
+        num=num/i
+    }
+}
+if (num>2){array.push(num)}
+console.log(array)
